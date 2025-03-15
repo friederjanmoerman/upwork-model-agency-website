@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material"
+import MainNav from "@/components/organisms/MainNav/MainNav"
 
 export default function Home() {
-  return <Typography variant="h1">Valhalla Girls</Typography>
+  return <MainNav></MainNav>
 }
