@@ -1,11 +1,12 @@
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+import { ReactNode } from "react"
+import ThemeRegistry from "@/components/ThemeRegistry" // ✅ Use the wrapper
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html>
-      <body>{children}</body>
+    <html lang="en">
+      <body>
+        <ThemeRegistry>{children}</ThemeRegistry>
+      </body>
     </html>
   )
 }

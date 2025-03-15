@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "Norse";
+  src: url("./fonts/Norse.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
