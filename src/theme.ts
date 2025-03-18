@@ -5,6 +5,9 @@ const theme = createTheme({
     primary: {
       main: "#94754A",
     },
+    secondary: {
+      main: "#000000",
+    },
   },
   typography: {
     fontFamily: "Norse, Arial, sans-serif",
@@ -13,8 +16,12 @@ const theme = createTheme({
       fontWeight: 100,
     },
     h2: {
-      fontSize: "90px",
+      fontSize: "70px",
       fontWeight: 800,
+    },
+    body1: {
+      fontSize: "18px",
+      fontFamily: "Inter, Arial, sans-serif",
     },
   },
 })
