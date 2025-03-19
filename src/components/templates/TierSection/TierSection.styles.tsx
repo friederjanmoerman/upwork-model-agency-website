@@ -1,6 +1,7 @@
 // TierSection.styles.ts
 import Grid2, { Grid2Props } from "@mui/material/Grid2"
 import { styled } from "@mui/material"
+import Image from "next/image"
 
 export const StyledSection = styled(Grid2)<Grid2Props>(() => ({
   display: "flex",
@@ -12,6 +13,21 @@ export const StyledSection = styled(Grid2)<Grid2Props>(() => ({
 export const StyledTier = styled(Grid2)<Grid2Props>(() => ({
   flexDirection: "column",
   display: "flex",
-  alignItems: "center",
   flex: "0 0 30%",
+
+  "&:nth-child(1) img": {
+    filter: "invert(42%) sepia(87%) saturate(230%) hue-rotate(355deg) brightness(94%) contrast(87%)",
+  },
+
+  "&:nth-child(2) img": {
+    filter: "invert(50%) sepia(20%) saturate(120%) hue-rotate(180deg) brightness(90%) contrast(80%)",
+  },
+
+  "&:nth-child(3) img": {
+    filter: "invert(20%) sepia(22%) saturate(1849%) hue-rotate(358deg) brightness(95%) contrast(86%)",
+  },
+}))
+
+export const StyledTierIcon = styled(Image)(() => ({
+  margin: "0 auto 30px",
 }))
