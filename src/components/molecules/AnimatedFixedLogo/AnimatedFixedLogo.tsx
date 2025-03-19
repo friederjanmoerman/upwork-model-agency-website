@@ -10,7 +10,7 @@ const AnimatedFixedLogo = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const triggerPoint = window.innerHeight
+      const triggerPoint = window.innerHeight * 1.2
 
       if (window.scrollY >= triggerPoint) {
         setVisible(true)

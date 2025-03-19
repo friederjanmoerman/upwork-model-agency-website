@@ -10,6 +10,6 @@ export const AnimatedFixedLogoContainer = styled("div")<AnimatedFixedLogoContain
   top: "40px",
   left: "5%",
   opacity: visible ? 1 : 0,
-  transition: "opacity 100ms ease-in-out",
+  transition: "opacity 100ms ease-in",
   zIndex: 1000,
 }))

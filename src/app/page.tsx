@@ -9,8 +9,8 @@ import AnimatedFixedLogo from "@/components/molecules/AnimatedFixedLogo/Animated
 export default function Home() {
   return (
     <StyledContainer>
-      <Splash></Splash>
       <AnimatedFixedLogo />
+      <Splash></Splash>
       <InfoSection></InfoSection>
       <TierSection></TierSection>
     </StyledContainer>
