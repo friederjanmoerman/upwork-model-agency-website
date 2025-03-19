@@ -32,6 +32,7 @@ export const StyledSplashBodyRight = styled("div")(({ theme }: { theme: Theme })
   fontWeight: "800",
   display: "flex",
   flexDirection: "column",
+  marginBottom: "4%",
 }))
 
 export const StyledSplashBodyLeftEmphasis = styled("span")(() => ({
