@@ -3,7 +3,7 @@ import { StyledAppBar, StyledToolbar } from "./MainNav.styles"
 
 function MainNav() {
   return (
-    <StyledAppBar elevation={0} color="transparent">
+    <StyledAppBar position="relative" elevation={0} color="transparent">
       <StyledToolbar>
         <IconButtonCustom iconSrc="./icons/tiktok.svg" />
         <IconButtonCustom iconSrc="./icons/instagram.svg" />

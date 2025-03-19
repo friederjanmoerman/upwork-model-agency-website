@@ -9,10 +9,12 @@ import {
   StyledSplashBodyRight,
   StyledSplashBodyRightEmphasis,
 } from "./Splash.styles"
+import MainNav from "@/components/organisms/MainNav/MainNav"
 
 function Splash() {
   return (
     <StyledSplash>
+      <MainNav></MainNav>
       <Typography color="primary" variant="h1">
         Valhalla Girls
       </Typography>
