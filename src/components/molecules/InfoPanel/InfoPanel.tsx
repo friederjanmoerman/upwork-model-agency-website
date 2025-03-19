@@ -1,40 +1,37 @@
 // InfoPanel.tsx
 "use client"
 
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useState } from "react"
 import Typography from "@mui/material/Typography"
 import { StyledPanel } from "./InfoPanel.styles"
 
-function InfoPanel() {
-  const panelRef = useRef<HTMLDivElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
+const InfoPanel = () => {
+  const [scrollProgress, setScrollProgress] = useState(0)
+
+  const handleScroll = () => {
+    const totalScroll = document.body.scrollHeight - window.innerHeight
+    const currentScroll = window.scrollY
+    const progress = currentScroll / totalScroll
+
+    const clampedProgress = Math.min(Math.max(progress, 0), 1)
+    setScrollProgress(clampedProgress)
+  }
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting)
-      },
-      { threshold: 0.1 } // Adjust threshold as necessary
-    )
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    handleScroll()
 
-    if (panelRef.current) observer.observe(panelRef.current)
-
-    return () => {
-      if (panelRef.current) observer.unobserve(panelRef.current)
-    }
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
-    <>
-      <StyledPanel ref={panelRef} visible={isVisible}></StyledPanel>
-      <StyledPanel ref={panelRef} visible={isVisible}>
-        <Typography variant="h2">Custom AI Viking Videos</Typography>
-        <Typography color="primary" variant="body1">
-          Your real likeness into one-of-a-kind Viking-inspired videos that captivate and resonate. Your natural beauty
-          amplified.
-        </Typography>
-      </StyledPanel>
-    </>
+    <StyledPanel progress={scrollProgress}>
+      <Typography variant="h2">Custom AI Viking Videos</Typography>
+      <Typography color="primary" variant="body1">
+        Your real likeness into one-of-a-kind Viking-inspired videos that captivate and resonate. Your natural beauty
+        amplified.
+      </Typography>
+    </StyledPanel>
   )
 }
 
