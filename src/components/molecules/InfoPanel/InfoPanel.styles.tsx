@@ -5,15 +5,35 @@ interface StyledPanelProps {
   progress: number
 }
 
-export const StyledPanel = styled("div")<StyledPanelProps>(({ progress }) => ({
-  position: "fixed",
-  top: "50%",
-  right: "5%", // Adjust right margin as needed
-  width: "45%", // matches your flex-basis of 45%
-  transform: `translateY(-50%) translateY(${(0.5 - progress) * 100}px)`,
-  opacity: 1 - Math.abs(0.5 - progress) * 2,
-  transition: "opacity 0.1s ease-out, transform 0.1s ease-out",
-  pointerEvents: "none",
-  padding: "16px",
-  zIndex: 10,
-}))
+export const StyledPanel = styled("div")<StyledPanelProps>(({ progress }) => {
+  const fadeInStart = 0.3
+  const fadeOutEnd = 0.7
+
+  let opacity
+  if (progress <= fadeInStart) {
+    opacity = 0
+  } else if (progress >= fadeOutEnd) {
+    opacity = 0
+  } else if (progress > fadeInStart && progress < (fadeInStart + fadeOutEnd) / 2) {
+    opacity = (progress - fadeInStart) / ((fadeOutEnd - fadeInStart) / 2)
+  } else {
+    opacity = (fadeOutEnd - progress) / ((fadeOutEnd - fadeInStart) / 2)
+  }
+
+  opacity = Math.max(0, Math.min(1, opacity))
+
+  const translateY = (0.5 - progress) * 100
+
+  return {
+    position: "fixed",
+    top: "50%",
+    right: "5%",
+    width: "45%",
+    transform: `translateY(-50%) translateY(${translateY}px)`,
+    opacity,
+    transition: "opacity 0.2s ease-out, transform 0.2s ease-out",
+    pointerEvents: "none",
+    textAlign: "right",
+    zIndex: 10,
+  }
+})

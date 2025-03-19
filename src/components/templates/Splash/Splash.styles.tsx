@@ -3,7 +3,7 @@ import { styled, Theme } from "@mui/material/styles"
 export const StyledSplash = styled("section")(() => ({
   display: "flex",
   height: "100vh",
-  paddingBottom: "20%",
+  paddingBottom: "40%",
   flexDirection: "column",
 }))
 

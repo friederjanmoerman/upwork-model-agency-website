@@ -6,6 +6,7 @@ import Image from "next/image"
 export const StyledSection = styled(Grid2)<Grid2Props>(() => ({
   display: "flex",
   minHeight: "100vh",
+  paddingTop: "40",
   alignItems: "center",
   justifyContent: "space-between",
 }))
