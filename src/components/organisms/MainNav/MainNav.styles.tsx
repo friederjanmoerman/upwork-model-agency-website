@@ -6,7 +6,6 @@ export const StyledAppBar = styled(AppBar)<AppBarProps>(() => ({
   display: "flex",
   alignItems: "flex-end",
   margin: "0 auto",
-  background: "#fff",
 }))
 
 export const StyledToolbar = styled(Toolbar)<ToolbarProps>(() => ({
