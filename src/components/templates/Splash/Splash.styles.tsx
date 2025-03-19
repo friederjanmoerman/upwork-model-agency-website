@@ -33,10 +33,10 @@ export const StyledSplashBodyRight = styled("div")(({ theme }: { theme: Theme })
   flexDirection: "column",
 }))
 
-export const StyledSplashBodyLeftEmphasis = styled("span")(({ theme }: { theme: Theme }) => ({
+export const StyledSplashBodyLeftEmphasis = styled("span")(() => ({
   fontSize: "96px",
 }))
 
-export const StyledSplashBodyRightEmphasis = styled("span")(({ theme }: { theme: Theme }) => ({
+export const StyledSplashBodyRightEmphasis = styled("span")(() => ({
   fontSize: "64px",
 }))
