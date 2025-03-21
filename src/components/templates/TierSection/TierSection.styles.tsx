@@ -14,8 +14,8 @@ export const StyledTier = styled(Grid2)<Grid2Props>(() => ({
   flexDirection: "column",
   display: "flex",
   flex: "0 0 30%",
-  opacity: 0, // Initially hidden
-  transform: "translateY(30px)", // Start slightly lower
+  opacity: 0,
+  transform: "translateY(30px)",
   transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
 
   "&.fade-in": {

@@ -16,7 +16,7 @@ function TierSection() {
           setIsVisible(true)
         }
       },
-      { threshold: 0.5 } // Trigger when 50% of section is visible
+      { threshold: 0.5 }
     )
 
     if (sectionRef.current) {
@@ -30,12 +30,11 @@ function TierSection() {
     }
   }, [])
 
-  // Trigger sequential fade-in
   useEffect(() => {
     if (isVisible) {
       const interval = setInterval(() => {
         setFadeInIndex(prev => prev + 1)
-      }, 300) // Delay each fade-in effect
+      }, 300)
 
       if (fadeInIndex >= 3) {
         clearInterval(interval)
