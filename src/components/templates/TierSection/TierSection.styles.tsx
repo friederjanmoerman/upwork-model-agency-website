@@ -1,4 +1,3 @@
-// TierSection.styles.ts
 import Grid2, { Grid2Props } from "@mui/material/Grid2"
 import { styled } from "@mui/material"
 import Image from "next/image"
@@ -15,6 +14,14 @@ export const StyledTier = styled(Grid2)<Grid2Props>(() => ({
   flexDirection: "column",
   display: "flex",
   flex: "0 0 30%",
+  opacity: 0, // Initially hidden
+  transform: "translateY(30px)", // Start slightly lower
+  transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+
+  "&.fade-in": {
+    opacity: 1,
+    transform: "translateY(0)",
+  },
 
   "&:nth-child(1) img": {
     filter: "invert(42%) sepia(87%) saturate(230%) hue-rotate(355deg) brightness(94%) contrast(87%)",
