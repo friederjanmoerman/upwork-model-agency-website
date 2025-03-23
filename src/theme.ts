@@ -16,15 +16,21 @@ const theme = createTheme({
       fontWeight: 100,
     },
     h2: {
-      fontSize: "70px",
+      fontSize: "60px",
       fontWeight: 800,
+      [`@media (max-width:1200px)`]: {
+        fontSize: "25px",
+      },
     },
     h3: {
       fontSize: "40px",
       fontWeight: 800,
+      [`@media (max-width:1200px)`]: {
+        fontSize: "22px",
+      },
     },
     body1: {
-      fontSize: "18px",
+      fontSize: "16px",
       fontFamily: "Inter, Arial, sans-serif",
       [`@media (max-width:1200px)`]: {
         fontSize: "14px",

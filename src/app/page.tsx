@@ -5,11 +5,12 @@ import InfoSection from "@/components/templates/InfoSection/InfoSection"
 import TierSection from "@/components/templates/TierSection/TierSection"
 import { StyledContainer } from "./page.styles"
 import AnimatedFixedLogo from "@/components/molecules/AnimatedFixedLogo/AnimatedFixedLogo"
-import Footer from "@/components/templates/Footer/Footer"
 import ModalForm from "@/components/organisms/Form/ModalForm"
 import { Button } from "@mui/material"
 
 import { useState } from "react"
+import BackgroundFrames from "@/components/atoms/BackgroundFrames/BackgroundFrames"
+import Footer from "@/components/templates/Footer/Footer"
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,6 +19,7 @@ export default function Home() {
     <>
       <StyledContainer>
         <AnimatedFixedLogo />
+        <BackgroundFrames />
         <Splash />
         <InfoSection />
         <TierSection />

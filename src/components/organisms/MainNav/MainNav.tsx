@@ -1,13 +1,10 @@
-import IconButtonCustom from "@/components/atoms/IconButtonCustom/IconButtonCustom"
-import { StyledAppBar, StyledToolbar } from "./MainNav.styles"
+import { StyledAppBar } from "./MainNav.styles"
+import SocialIcons from "@/components/molecules/SocialIcons/SocialIcons"
 
 function MainNav() {
   return (
     <StyledAppBar position="relative" elevation={0} color="transparent">
-      <StyledToolbar>
-        <IconButtonCustom iconSrc="./icons/tiktok.svg" />
-        <IconButtonCustom iconSrc="./icons/instagram.svg" />
-      </StyledToolbar>
+      <SocialIcons />
     </StyledAppBar>
   )
 }

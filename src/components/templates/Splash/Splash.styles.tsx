@@ -1,3 +1,4 @@
+import theme from "@/theme"
 import { styled, Theme } from "@mui/material/styles"
 
 export const StyledSplash = styled("section")(() => ({
@@ -22,6 +23,9 @@ export const StyledSplashBodyLeft = styled("div")(({ theme }: { theme: Theme }) 
   fontWeight: "800",
   display: "flex",
   flexDirection: "column",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "22px",
+  },
 }))
 
 export const StyledSplashBodyRight = styled("div")(({ theme }: { theme: Theme }) => ({
@@ -33,12 +37,21 @@ export const StyledSplashBodyRight = styled("div")(({ theme }: { theme: Theme })
   display: "flex",
   flexDirection: "column",
   marginBottom: "4%",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "22px",
+  },
 }))
 
 export const StyledSplashBodyLeftEmphasis = styled("span")(() => ({
   fontSize: "96px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "40px",
+  },
 }))
 
 export const StyledSplashBodyRightEmphasis = styled("span")(() => ({
   fontSize: "64px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "40px",
+  },
 }))

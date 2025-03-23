@@ -46,7 +46,7 @@ function TierSection() {
 
   return (
     <StyledSection ref={sectionRef} container spacing={{ xs: 2, md: 4 }}>
-      <StyledTier item xs={12} sm={12} md={4} className={fadeInIndex >= 1 ? "fade-in" : ""}>
+      <StyledTier item xs={12} sm={6} md={4} className={fadeInIndex >= 1 ? "fade-in" : ""}>
         <StyledTierIcon src="/icons/icon__tier.svg" alt="Gold Tier 1" width={50} height={70} />
         <Typography color="secondary" variant="h3">
           Elite Experience
@@ -56,7 +56,7 @@ function TierSection() {
           content consultation. Massive platform reposts, reaching millions.
         </Typography>
       </StyledTier>
-      <StyledTier item xs={12} sm={12} md={4} className={fadeInIndex >= 2 ? "fade-in" : ""}>
+      <StyledTier item xs={12} sm={6} md={4} className={fadeInIndex >= 2 ? "fade-in" : ""}>
         <StyledTierIcon src="/icons/icon__tier.svg" alt="Silver Tier 2" width={50} height={70} />
         <Typography color="secondary" variant="h3">
           Consistent Growth
@@ -66,7 +66,7 @@ function TierSection() {
           couple of strategic reposts daily to amplify your reach.
         </Typography>
       </StyledTier>
-      <StyledTier item xs={12} sm={12} md={4} className={fadeInIndex >= 3 ? "fade-in" : ""}>
+      <StyledTier item xs={12} sm={6} md={4} className={fadeInIndex >= 3 ? "fade-in" : ""}>
         <StyledTierIcon src="/icons/icon__tier.svg" alt="Bronze Tier 3" width={50} height={70} />
         <Typography color="secondary" variant="h3">
           Introductory Launch
