@@ -1,8 +1,8 @@
-import Grid2, { Grid2Props } from "@mui/material/Grid2"
+import Grid, { GridProps } from "@mui/material/Grid"
 import { styled } from "@mui/material"
 import Image from "next/image"
 
-export const StyledSection = styled(Grid2)<Grid2Props>(() => ({
+export const StyledSection = styled(Grid)<GridProps>(() => ({
   display: "flex",
   minHeight: "100vh",
   paddingTop: "40",
@@ -10,10 +10,7 @@ export const StyledSection = styled(Grid2)<Grid2Props>(() => ({
   justifyContent: "space-between",
 }))
 
-export const StyledTier = styled(Grid2)<Grid2Props>(() => ({
-  flexDirection: "column",
-  display: "flex",
-  flex: "0 0 30%",
+export const StyledTier = styled(Grid)<GridProps>(() => ({
   opacity: 0,
   transform: "translateY(30px)",
   transition: "opacity 0.6s ease-out, transform 0.6s ease-out",

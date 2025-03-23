@@ -12,7 +12,7 @@ const theme = createTheme({
   typography: {
     fontFamily: "Norse, Arial, sans-serif",
     h1: {
-      fontSize: "262px",
+      fontSize: "18.5vw",
       fontWeight: 100,
     },
     h2: {
