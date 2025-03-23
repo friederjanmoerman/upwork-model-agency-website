@@ -26,6 +26,9 @@ const theme = createTheme({
     body1: {
       fontSize: "18px",
       fontFamily: "Inter, Arial, sans-serif",
+      [`@media (max-width:1200px)`]: {
+        fontSize: "14px",
+      },
     },
   },
 })

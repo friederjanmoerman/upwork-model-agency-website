@@ -5,15 +5,16 @@ import Image from "next/image"
 export const StyledSection = styled(Grid)<GridProps>(() => ({
   display: "flex",
   minHeight: "100vh",
-  paddingTop: "40",
+  paddingTop: "40px",
   alignItems: "center",
-  justifyContent: "space-between",
+  justifyContent: "center",
 }))
 
 export const StyledTier = styled(Grid)<GridProps>(() => ({
   opacity: 0,
   transform: "translateY(30px)",
   transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+  marginBottom: "40px",
 
   "&.fade-in": {
     opacity: 1,

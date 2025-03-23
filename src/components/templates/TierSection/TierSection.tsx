@@ -45,7 +45,7 @@ function TierSection() {
   }, [isVisible, fadeInIndex])
 
   return (
-    <StyledSection ref={sectionRef} container spacing={4}>
+    <StyledSection ref={sectionRef} container spacing={{ xs: 2, md: 4 }}>
       <StyledTier item xs={12} sm={12} md={4} className={fadeInIndex >= 1 ? "fade-in" : ""}>
         <StyledTierIcon src="/icons/icon__tier.svg" alt="Gold Tier 1" width={50} height={70} />
         <Typography color="secondary" variant="h3">
