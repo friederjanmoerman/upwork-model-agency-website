@@ -3,11 +3,16 @@ import { styled } from "@mui/material"
 import Image from "next/image"
 import theme from "@/theme"
 
-export const StyledSection = styled(Grid)<GridProps>(() => ({
-  display: "flex",
+export const StyledContainerTierSection = styled(Grid)<GridProps>(() => ({
   minHeight: "80vh",
   paddingTop: "340px",
   paddingBottom: "100px",
+  background:
+    "linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.70) 40%, rgba(255, 255, 255, 1) 100%)",
+}))
+
+export const StyledSection = styled(Grid)<GridProps>(() => ({
+  display: "flex",
   justifyContent: "center",
   [theme.breakpoints.up("sm")]: {
     alignItems: "center",
