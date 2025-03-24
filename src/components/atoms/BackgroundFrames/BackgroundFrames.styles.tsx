@@ -1,29 +1,32 @@
 import { styled } from "@mui/material"
-import Image from "next/image"
 
-export const StyledBackgroundWrapper = styled("div")(() => ({
+export const StyledBackgroundWrapper = styled("div")({
   position: "fixed",
   top: 0,
   left: 0,
   width: "100%",
   height: "100%",
+  overflow: "hidden",
   zIndex: -1,
-  pointerEvents: "none",
-}))
+})
 
-export const StyledImage = styled(Image)(() => ({
-  position: "absolute",
-  objectFit: "cover",
-  zIndex: -2,
-}))
-
-export const StyledOverlay = styled("div")(() => ({
+export const StyledCanvas = styled("canvas")({
   position: "absolute",
   top: 0,
   left: 0,
   width: "100%",
   height: "100%",
-  backgroundColor: "white",
-  zIndex: -1,
-  transition: "opacity 0.2s ease-out",
-}))
+  objectFit: "cover",
+})
+
+export const StyledOverlay = styled("div")({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  background: "linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7))",
+  pointerEvents: "none",
+  opacity: 0,
+  transition: "opacity 0.2s ease",
+})
