@@ -17,6 +17,7 @@ export const StyledCanvas = styled("canvas")({
   width: "100%",
   height: "100%",
   objectFit: "cover",
+  zIndex: 0,
 })
 
 export const StyledOverlay = styled("div")({
@@ -25,8 +26,9 @@ export const StyledOverlay = styled("div")({
   left: 0,
   width: "100%",
   height: "100%",
-  background: "linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7))",
+  background: "linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))",
   pointerEvents: "none",
   opacity: 0,
   transition: "opacity 0.2s ease",
+  zIndex: 1,
 })

@@ -65,7 +65,6 @@ const BackgroundFrames = () => {
     ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight)
   }
 
-  // Handle scroll
   useEffect(() => {
     const onScroll = () => {
       const scrollTop = window.scrollY
