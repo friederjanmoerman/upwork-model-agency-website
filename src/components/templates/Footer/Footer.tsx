@@ -1,5 +1,3 @@
-// src/components/organisms/Footer/Footer.tsx
-
 "use client"
 import React from "react"
 import { Link } from "@mui/material"

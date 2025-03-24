@@ -9,7 +9,7 @@ import AnimatedFixedLogo from "@/components/molecules/AnimatedFixedLogo/Animated
 // import { Button } from "@mui/material"
 
 // import { useState } from "react"
-import BackgroundFrames from "@/components/atoms/BackgroundFrames/BackgroundFrames"
+// import BackgroundFrames from "@/components/atoms/BackgroundFrames/BackgroundFrames"
 import Footer from "@/components/templates/Footer/Footer"
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <StyledContainer>
         <AnimatedFixedLogo />
-        <BackgroundFrames />
+        {/* <BackgroundFrames /> */}
         <Splash />
         <InfoSection />
       </StyledContainer>
