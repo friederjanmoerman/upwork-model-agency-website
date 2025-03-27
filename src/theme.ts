@@ -16,7 +16,7 @@ const theme = createTheme({
       fontWeight: 100,
     },
     h2: {
-      fontSize: "60px",
+      fontSize: "50px",
       fontWeight: 800,
       [`@media (max-width:1200px)`]: {
         fontSize: "25px",

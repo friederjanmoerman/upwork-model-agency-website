@@ -28,7 +28,7 @@ export const StyledPanel = styled("div")<StyledPanelProps>(({ progress }) => {
     position: "fixed",
     top: "50%",
     right: "5%",
-    width: "45%",
+    width: "30%",
     transform: `translateY(-50%) translateY(${translateY}px)`,
     opacity,
     transition: "opacity 0.2s ease-out, transform 0.2s ease-out",
