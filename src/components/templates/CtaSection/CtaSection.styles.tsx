@@ -6,4 +6,5 @@ export const StyledContainerCtaSection = styled("div")(() => ({
   display: "flex",
   alignItems: "flex-start",
   justifyContent: "center",
+  marginBottom: "100px",
 }))
