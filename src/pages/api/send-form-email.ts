@@ -1,4 +1,3 @@
-// pages/api/send-form-email.ts
 import type { NextApiRequest, NextApiResponse } from "next"
 import nodemailer from "nodemailer"
 
@@ -10,30 +9,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const formData = req.body
 
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT),
+    secure: true,
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
     },
   })
 
-  const mailOptions = {
-    from: `"Valhalla Girls Application" <${process.env.EMAIL_USER}>`,
-    to: "howl@hardcodepunk.be",
-    subject: "New Application Submission",
-    html: `
-      <h2>New Application Submission</h2>
-      ${Object.entries(formData)
-        .map(([key, value]) => `<p><strong>${key}:</strong> ${value}</p>`)
-        .join("")}
-    `,
-  }
-
   try {
-    await transporter.sendMail(mailOptions)
-    res.status(200).send({ message: "Email sent successfully" })
-  } catch (error) {
-    console.error(error)
-    res.status(500).send({ error: "Failed to send email" })
+    await transporter.sendMail({
+      from: `"New Form Submission" <${process.env.EMAIL_FROM}>`,
+      to: process.env.EMAIL_TO,
+      subject: "📩 New Form Submission from Website",
+      html: `
+        <h2>Form Submission Details:</h2>
+        ${Object.entries(formData)
+          .map(([key, value]) => `<p><strong>${key}:</strong> ${value || "N/A"}</p>`)
+          .join("")}
+      `,
+    })
+
+    res.status(200).send({ message: "Email sent successfully!" })
+  } catch (error: any) {
+    console.error("Error sending email:", error)
+    res.status(500).send({ error: "Error sending email", details: error.message })
   }
 }

@@ -60,13 +60,13 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
       })
 
       if (response.ok) {
-        console.log("Form successfully sent!")
+        console.log("✅ Form successfully sent!")
         handleClose()
       } else {
-        console.error("Error sending form:", await response.text())
+        console.error("❌ Error sending form:", await response.text())
       }
     } catch (error) {
-      console.error("Error:", error)
+      console.error("❌ Error:", error)
     }
   }
 
