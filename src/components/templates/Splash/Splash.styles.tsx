@@ -43,15 +43,15 @@ export const StyledSplashBodyRight = styled("div")(({ theme }: { theme: Theme })
 }))
 
 export const StyledSplashBodyLeftEmphasis = styled("span")(() => ({
-  fontSize: "96px",
+  fontSize: "80px",
   [theme.breakpoints.down("md")]: {
     fontSize: "40px",
   },
 }))
 
 export const StyledSplashBodyRightEmphasis = styled("span")(() => ({
-  fontSize: "64px",
+  fontSize: "54px",
   [theme.breakpoints.down("md")]: {
-    fontSize: "40px",
+    fontSize: "37px",
   },
 }))
