@@ -1,12 +1,9 @@
-// components/organisms/ModalForm/ModalForm.tsx
 import React, { useState } from "react"
 import {
   Dialog,
-  DialogTitle,
   DialogContent,
   DialogActions,
   TextField,
-  Button,
   FormControlLabel,
   Radio,
   FormLabel,
@@ -44,12 +41,10 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
     additionalInfo: "",
   })
 
-  // Generic controlled input handler
   const handleChange = (field: string) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [field]: event.target.value }))
   }
 
-  // Handle radio changes
   const handleRadioChange = (field: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormData(prev => ({ ...prev, [field]: event.target.value }))
   }
@@ -103,7 +98,6 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
               fullWidth
             />
 
-            {/* SOCIAL MEDIA & ONLINE PRESENCE */}
             <FormSectionTitle variant="h6">Social Media & Online Presence</FormSectionTitle>
             <TextField
               label="Instagram Handle"
@@ -133,7 +127,6 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
               fullWidth
             />
 
-            {/* AVAILABILITY & COMMITMENT */}
             <FormSectionTitle variant="h6">Availability & Commitment</FormSectionTitle>
             <FormLabel>How many hours per week can you dedicate to creating content?</FormLabel>
             <RadioGroup value={formData.hoursPerWeek} onChange={handleRadioChange("hoursPerWeek")}>
@@ -167,7 +160,6 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
               <FormControlLabel value="maybe" control={<Radio />} label="Maybe, need details" />
             </RadioGroup>
 
-            {/* SPECIAL SKILLS & EXPERIENCE */}
             <FormSectionTitle variant="h6">Special Skills & Experience</FormSectionTitle>
             <TextField
               label="Any special skills or talents?"
@@ -178,7 +170,6 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
               fullWidth
             />
 
-            {/* PARTNERSHIP & EXPECTATIONS */}
             <FormSectionTitle variant="h6">Partnership & Expectations</FormSectionTitle>
             <TextField
               label="What % do you think is fair for our partnership?"
@@ -187,7 +178,6 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
               fullWidth
             />
 
-            {/* ADDITIONAL INFORMATION */}
             <FormSectionTitle variant="h6">Additional Information</FormSectionTitle>
             <TextField
               label="Why do you want to work with Valhalla Girls?"
@@ -209,7 +199,6 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
         </Box>
       </DialogContent>
 
-      {/* Bottom Action Buttons */}
       <DialogActions>
         <ButtonCustom onClick={handleClose}>Close</ButtonCustom>
         <ButtonCustom onClick={handleSubmit}>Submit</ButtonCustom>
