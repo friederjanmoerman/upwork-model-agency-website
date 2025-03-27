@@ -54,10 +54,25 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
     setFormData(prev => ({ ...prev, [field]: event.target.value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Submitting form data:", formData)
-    handleClose()
+
+    try {
+      const response = await fetch("/api/send-form-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        console.log("Form successfully sent!")
+        handleClose()
+      } else {
+        console.error("Error sending form:", await response.text())
+      }
+    } catch (error) {
+      console.error("Error:", error)
+    }
   }
 
   return (
