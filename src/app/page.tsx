@@ -7,7 +7,7 @@ import { StyledContainer } from "./page.styles"
 import AnimatedFixedLogo from "@/components/molecules/AnimatedFixedLogo/AnimatedFixedLogo"
 
 import Footer from "@/components/templates/Footer/Footer"
-import BackgroundFrames from "@/components/atoms/BackgroundFrames/BackgroundFrames"
+// import BackgroundFrames from "@/components/atoms/BackgroundFrames/BackgroundFrames"
 import CtaSection from "@/components/templates/CtaSection/CtaSection"
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <StyledContainer>
         <AnimatedFixedLogo />
-        <BackgroundFrames />
+        {/* <BackgroundFrames /> */}
         <Splash />
         <InfoSection />
       </StyledContainer>

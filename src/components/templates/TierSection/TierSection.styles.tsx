@@ -14,7 +14,7 @@ export const StyledContainerTierSection = styled(Grid)<GridProps>(() => ({
 export const StyledSection = styled(Grid)<GridProps>(() => ({
   display: "flex",
   justifyContent: "center",
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.down("sm")]: {
     alignItems: "center",
   },
 }))
@@ -30,17 +30,17 @@ export const StyledTier = styled(Grid)<GridProps>(() => ({
     transform: "translateY(0)",
   },
 
-  "&:nth-of-type(1) img": {
+  img: {
     filter: "invert(42%) sepia(87%) saturate(230%) hue-rotate(355deg) brightness(94%) contrast(87%)",
   },
 
-  "&:nth-of-type(2) img": {
-    filter: "invert(50%) sepia(20%) saturate(120%) hue-rotate(180deg) brightness(90%) contrast(80%)",
-  },
+  // "&:nth-of-type(2) img": {
+  //   filter: "invert(50%) sepia(20%) saturate(120%) hue-rotate(180deg) brightness(90%) contrast(80%)",
+  // },
 
-  "&:nth-of-type(3) img": {
-    filter: "invert(20%) sepia(22%) saturate(1849%) hue-rotate(358deg) brightness(95%) contrast(86%)",
-  },
+  // "&:nth-of-type(3) img": {
+  //   filter: "invert(20%) sepia(22%) saturate(1849%) hue-rotate(358deg) brightness(95%) contrast(86%)",
+  // },
 }))
 
 export const StyledTierIcon = styled(Image)(() => ({
