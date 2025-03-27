@@ -30,8 +30,9 @@ export async function POST(request: NextRequest) {
     })
 
     return NextResponse.json({ message: "Email sent successfully!" }, { status: 200 })
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : "Unknown error"
     console.error(error)
-    return NextResponse.json({ error: "Failed to send email", details: error.message }, { status: 500 })
+    return NextResponse.json({ error: "Failed to send email", details: message }, { status: 500 })
   }
 }
