@@ -14,12 +14,15 @@ const theme = createTheme({
     h1: {
       fontSize: "18.5vw",
       fontWeight: 100,
+      [`@media (min-width:1450px)`]: {
+        fontSize: "287px",
+      },
     },
     h2: {
       fontSize: "50px",
       fontWeight: 800,
       [`@media (max-width:1200px)`]: {
-        fontSize: "25px",
+        fontSize: "19px",
       },
     },
     h3: {
