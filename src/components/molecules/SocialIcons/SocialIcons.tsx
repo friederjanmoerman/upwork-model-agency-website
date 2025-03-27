@@ -4,8 +4,8 @@ import { StyledToolbar } from "./SocialIcons.styles"
 function SocialIcons() {
   return (
     <StyledToolbar>
-      <IconButtonCustom iconSrc="./icons/tiktok.svg" />
-      <IconButtonCustom iconSrc="./icons/instagram.svg" />
+      <IconButtonCustom href="https://www.tiktok.com/@valhallagirlsoriginal" iconSrc="./icons/tiktok.svg" />
+      <IconButtonCustom href="https://www.instagram.com/valhallagirlsofficial/" iconSrc="./icons/instagram.svg" />
     </StyledToolbar>
   )
 }
