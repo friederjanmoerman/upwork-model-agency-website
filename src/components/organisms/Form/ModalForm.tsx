@@ -14,6 +14,7 @@ import {
   Box,
 } from "@mui/material"
 import { FormContainer, FormSectionTitle } from "./ModalForm.styles"
+import ButtonCustom from "@/components/atoms/ButtonCustom/ButtonCustom"
 
 interface ModalFormProps {
   open: boolean
@@ -55,27 +56,15 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Do something with formData, e.g. call an API
     console.log("Submitting form data:", formData)
     handleClose()
   }
 
   return (
-    <Dialog
-      open={open}
-      onClose={handleClose}
-      // IMPORTANT: scroll="paper" makes dialog content scrollable
-      scroll="paper"
-      fullWidth
-      maxWidth="sm"
-    >
-      <DialogTitle>Model Application</DialogTitle>
-
-      {/* Scrollable content area */}
+    <Dialog open={open} onClose={handleClose} scroll="paper" fullWidth maxWidth="sm">
       <DialogContent dividers>
         <Box component="form" onSubmit={handleSubmit}>
           <FormContainer>
-            {/* PERSONAL INFORMATION */}
             <FormSectionTitle variant="h6">Personal Information</FormSectionTitle>
             <TextField label="Full Name" value={formData.fullName} onChange={handleChange("fullName")} fullWidth />
             <TextField
@@ -207,10 +196,8 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
 
       {/* Bottom Action Buttons */}
       <DialogActions>
-        <Button onClick={handleClose}>Cancel</Button>
-        <Button variant="contained" onClick={handleSubmit}>
-          Submit
-        </Button>
+        <ButtonCustom onClick={handleClose}>Close</ButtonCustom>
+        <ButtonCustom onClick={handleSubmit}>Submit</ButtonCustom>
       </DialogActions>
     </Dialog>
   )

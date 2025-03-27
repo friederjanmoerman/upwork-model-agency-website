@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles"
 
 export const StyledButton = styled(Button)<ButtonProps>(({ theme }) => ({
   fontFamily: "Norse, Arial, sans-serif",
-  fontSize: "24px",
+  fontSize: "22px",
   fontWeight: "800",
   borderRadius: "50px",
   border: `2px solid ${theme.palette.primary.main}`,
