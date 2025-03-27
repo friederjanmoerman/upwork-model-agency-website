@@ -1,6 +1,7 @@
 import { ReactNode } from "react"
 import ThemeRegistry from "@/components/ThemeRegistry"
 import { Inter } from "next/font/google"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "@/app/globals.css"
 
 const inter = Inter({
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className={inter.className}>
       <body>
         <ThemeRegistry>{children}</ThemeRegistry>
+        <SpeedInsights />
       </body>
     </html>
   )
