@@ -9,6 +9,7 @@ import AnimatedFixedLogo from "@/components/molecules/AnimatedFixedLogo/Animated
 import Footer from "@/components/templates/Footer/Footer"
 import BackgroundFrames from "@/components/atoms/BackgroundFrames/BackgroundFrames"
 import CtaSection from "@/components/templates/CtaSection/CtaSection"
+import FollowerSection from "@/components/templates/FollowerSection/FollowerSection"
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
         <Splash />
         <InfoSection />
       </StyledContainer>
+
+      <FollowerSection />
       <TierSection />
       <CtaSection />
       <Footer />
