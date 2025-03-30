@@ -10,20 +10,27 @@ import Footer from "@/components/templates/Footer/Footer"
 import BackgroundFrames from "@/components/atoms/BackgroundFrames/BackgroundFrames"
 import CtaSection from "@/components/templates/CtaSection/CtaSection"
 import FollowerSection from "@/components/templates/FollowerSection/FollowerSection"
+import ModalForm from "@/components/organisms/Form/ModalForm"
+
+import { useState } from "react"
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <>
       <StyledContainer>
         <AnimatedFixedLogo />
         <BackgroundFrames />
-        <Splash />
+        <Splash setIsOpen={setIsOpen} />
         <InfoSection />
       </StyledContainer>
 
       <FollowerSection />
       <TierSection />
-      <CtaSection />
+      <CtaSection setIsOpen={setIsOpen} />
+      <ModalForm open={isOpen} handleClose={() => setIsOpen(false)} />
+
       <Footer />
     </>
   )

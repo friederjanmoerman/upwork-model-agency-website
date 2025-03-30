@@ -6,11 +6,12 @@ export const StyledButton = styled(Button)<ButtonProps>(({ theme }) => ({
   fontSize: "22px",
   fontWeight: "800",
   borderRadius: "50px",
-  border: `2px solid ${theme.palette.primary.main}`,
-  color: theme.palette.primary.main,
+  background: theme.palette.secondary.main,
   padding: "10px 40px",
+  transition: "all 0.2s ease-in-out",
+  marginTop: "20px",
   "&:hover": {
-    background: theme.palette.secondary.main,
-    border: `2px solid ${theme.palette.secondary.main}`,
+    background: theme.palette.primary.main,
+    color: theme.palette.secondary.main,
   },
 }))

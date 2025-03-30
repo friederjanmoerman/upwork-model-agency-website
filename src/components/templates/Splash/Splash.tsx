@@ -1,5 +1,3 @@
-"use client"
-
 import { Typography } from "@mui/material"
 import {
   StyledSplash,
@@ -10,11 +8,16 @@ import {
   StyledSplashBodyRightEmphasis,
 } from "./Splash.styles"
 import MainNav from "@/components/organisms/MainNav/MainNav"
+import ButtonCustom from "@/components/atoms/ButtonCustom/ButtonCustom"
 
-function Splash() {
+type SplashProps = {
+  setIsOpen: (open: boolean) => void
+}
+
+function Splash({ setIsOpen }: SplashProps) {
   return (
     <StyledSplash>
-      <MainNav></MainNav>
+      <MainNav />
       <Typography color="primary" variant="h1">
         Valhalla Girls
       </Typography>
@@ -22,12 +25,14 @@ function Splash() {
         <StyledSplashBodyLeft>
           High end AI media
           <StyledSplashBodyLeftEmphasis>
-            boosting your<br></br> engagement
+            boosting your
+            <br /> engagement
           </StyledSplashBodyLeftEmphasis>
           to valhalla
         </StyledSplashBodyLeft>
         <StyledSplashBodyRight>
           Accepting only <StyledSplashBodyRightEmphasis>a select number</StyledSplashBodyRightEmphasis> of models
+          <ButtonCustom onClick={() => setIsOpen(true)}>Become Valhalla girl</ButtonCustom>
         </StyledSplashBodyRight>
       </StyledSplashBody>
     </StyledSplash>
