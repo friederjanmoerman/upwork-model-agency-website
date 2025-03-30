@@ -64,10 +64,10 @@ function FollowerSection() {
 
   useEffect(() => {
     if (fadeInIndex === 2 && tiktokFollowers === 0) {
-      animateCount(1355533, 2000, setTiktokFollowers)
+      animateCount(700000, 1000, setTiktokFollowers)
     }
     if (fadeInIndex === 3 && instagramFollowers === 0) {
-      animateCount(855000, 2000, setInstagramFollowers)
+      animateCount(855000, 1000, setInstagramFollowers)
     }
   }, [fadeInIndex, tiktokFollowers, instagramFollowers])
 
