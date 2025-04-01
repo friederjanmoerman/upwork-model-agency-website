@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef } from "react"
-import { StyledCanvas, StyledOverlay, StyledBackgroundWrapper } from "./BackgroundFrames.styles"
+import { StyledCanvas, StyledOverlay, StyledBackgroundWrapper, StyledOverlayTest } from "./BackgroundFrames.styles"
 
 const FRAME_COUNT = 167
 const IMAGE_PATH = (index: number) =>
@@ -91,6 +91,7 @@ const BackgroundFrames = () => {
     <StyledBackgroundWrapper>
       <StyledCanvas ref={canvasRef} />
       <StyledOverlay ref={overlayRef} />
+      <StyledOverlayTest />
     </StyledBackgroundWrapper>
   )
 }

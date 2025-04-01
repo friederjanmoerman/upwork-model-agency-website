@@ -32,3 +32,25 @@ export const StyledOverlay = styled("div")({
   transition: "opacity 0.2s ease",
   zIndex: 1,
 })
+
+export const StyledOverlayTest = styled("div")({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  background: `
+    linear-gradient(
+      135deg,
+      white 0%,
+      rgba(255, 255, 255, 0.8) 20%,
+      rgba(255, 255, 255, 0.4) 35%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.4) 65%,
+      rgba(255, 255, 255, 0.8) 80%,
+      white 100%
+    )
+  `,
+  pointerEvents: "none",
+  zIndex: 2,
+})
