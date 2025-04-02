@@ -43,11 +43,11 @@ export const StyledOverlayTest = styled("div")({
     linear-gradient(
       135deg,
       white 0%,
-      rgba(255, 255, 255, 0.8) 20%,
-      rgba(255, 255, 255, 0.4) 35%,
-      transparent 50%,
-      rgba(255, 255, 255, 0.4) 65%,
-      rgba(255, 255, 255, 0.8) 80%,
+      rgba(255, 255, 255, 0.8) 15%,
+      rgba(255, 255, 255, 0.4) 25%,
+      transparent 40%,
+      rgba(255, 255, 255, 0.4) 55%,
+      rgba(255, 255, 255, 0.8) 65%,
       white 100%
     )
   `,

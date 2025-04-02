@@ -23,12 +23,12 @@ function Splash({ setIsOpen }: SplashProps) {
       </Typography>
       <StyledSplashBody>
         <StyledSplashBodyLeft>
-          High end AI media
+          Become a
           <StyledSplashBodyLeftEmphasis>
-            boosting your
-            <br /> engagement
+            Valhalla Girl
+            <br />
           </StyledSplashBodyLeftEmphasis>
-          to valhalla
+          and enter today
         </StyledSplashBodyLeft>
         <StyledSplashBodyRight>
           Accepting only <StyledSplashBodyRightEmphasis>a select number</StyledSplashBodyRightEmphasis> of models
