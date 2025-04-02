@@ -75,7 +75,7 @@ function FollowerSection() {
     <StyledContainerFollowerSection>
       <StyledContainer>
         <StyledSection ref={sectionRef} container spacing={{ xs: 2, md: 4 }}>
-          <StyledFollower item xs={12} sm={6} md={6} className={fadeInIndex >= 2 ? "fade-in" : ""}>
+          <StyledFollower item md={6} className={fadeInIndex >= 2 ? "fade-in" : ""}>
             <Typography color="secondary" variant="h3">
               You&apos;ll be exposed to
             </Typography>
@@ -86,7 +86,7 @@ function FollowerSection() {
               Tiktok followers
             </Typography>
           </StyledFollower>
-          <StyledFollower item xs={12} sm={6} md={6} className={fadeInIndex >= 3 ? "fade-in" : ""}>
+          <StyledFollower item md={6} className={fadeInIndex >= 3 ? "fade-in" : ""}>
             <Typography color="secondary" variant="h3">
               You&apos;ll be exposed to
             </Typography>

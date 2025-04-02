@@ -4,21 +4,17 @@ import Image from "next/image"
 import theme from "@/theme"
 
 export const StyledContainerFollowerSection = styled(Grid)<GridProps>(() => ({
-  minHeight: "80vh",
-  paddingTop: "600px",
+  minHeight: "100vh",
+  paddingTop: "240%;",
   paddingBottom: "100px",
 }))
 
 export const StyledSection = styled(Grid)<GridProps>(() => ({
   display: "flex",
-  justifyContent: "center",
   textAlign: "center",
+  justifyContent: "space-evenly",
   position: "relative",
-  background: "#fff",
-  borderRadius: "50px",
-  border: `2px solid ${theme.palette.primary.main}`,
   color: theme.palette.primary.main,
-  padding: "10px 40px",
   zIndex: "50",
   [theme.breakpoints.down("sm")]: {
     alignItems: "center",
