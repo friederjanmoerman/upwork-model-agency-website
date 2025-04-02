@@ -1,7 +1,12 @@
 "use client"
 
 import { Typography } from "@mui/material"
-import { StyledContainerFollowerSection, StyledSection, StyledFollower } from "./FollowerSection.styles"
+import {
+  StyledContainerFollowerSection,
+  StyledSection,
+  StyledFollower,
+  StyledFollowerCount,
+} from "./FollowerSection.styles"
 import { useEffect, useRef, useState } from "react"
 import { StyledContainer } from "@/app/page.styles"
 
@@ -79,9 +84,7 @@ function FollowerSection() {
             <Typography color="secondary" variant="h3">
               You&apos;ll be exposed to
             </Typography>
-            <Typography color="primary" variant="h2">
-              {tiktokFollowers.toLocaleString("de-DE")}
-            </Typography>
+            <StyledFollowerCount>{tiktokFollowers.toLocaleString("de-DE")}</StyledFollowerCount>
             <Typography color="secondary" variant="h3">
               Tiktok followers
             </Typography>
@@ -90,9 +93,7 @@ function FollowerSection() {
             <Typography color="secondary" variant="h3">
               You&apos;ll be exposed to
             </Typography>
-            <Typography color="primary" variant="h2">
-              {instagramFollowers.toLocaleString("de-DE")}
-            </Typography>
+            <StyledFollowerCount>{instagramFollowers.toLocaleString("de-DE")}</StyledFollowerCount>
             <Typography color="secondary" variant="h3">
               Instagram followers
             </Typography>

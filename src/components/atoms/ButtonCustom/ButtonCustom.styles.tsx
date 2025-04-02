@@ -14,4 +14,7 @@ export const StyledButton = styled(Button)<ButtonProps>(({ theme }) => ({
     background: theme.palette.primary.main,
     color: theme.palette.secondary.main,
   },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "14px",
+  },
 }))

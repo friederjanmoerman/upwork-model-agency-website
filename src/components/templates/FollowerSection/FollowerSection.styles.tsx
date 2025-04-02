@@ -37,6 +37,15 @@ export const StyledFollower = styled(Grid)<GridProps>(() => ({
   },
 }))
 
+export const StyledFollowerCount = styled("h2")(() => ({
+  fontSize: "70px",
+  fontWeight: 800,
+  margin: 0,
+  padding: 0,
+  fontFamily: theme.typography.fontFamily,
+  color: theme.palette.secondary.main,
+}))
+
 export const StyledFollowerIcon = styled(Image)(() => ({
   margin: "0 auto 30px",
 }))

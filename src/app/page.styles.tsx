@@ -1,3 +1,4 @@
+import theme from "@/theme"
 import { styled } from "@mui/material"
 
 export const StyledContainer = styled("div")(() => ({
@@ -5,4 +6,7 @@ export const StyledContainer = styled("div")(() => ({
   padding: "0 5%",
   margin: "0 auto",
   position: "relative",
+  [theme.breakpoints.down("sm")]: {
+    padding: "0 5%",
+  },
 }))

@@ -1,4 +1,5 @@
 // InfoPanel.styles.tsx
+import theme from "@/theme"
 import { styled } from "@mui/material"
 
 interface StyledPanelProps {
@@ -35,5 +36,8 @@ export const StyledPanel = styled("div")<StyledPanelProps>(({ progress }) => {
     pointerEvents: "none",
     textAlign: "right",
     zIndex: 10,
+    [theme.breakpoints.down("sm")]: {
+      width: "54%",
+    },
   }
 })

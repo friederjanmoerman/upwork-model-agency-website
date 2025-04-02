@@ -37,6 +37,7 @@ const theme = createTheme({
       fontFamily: "Inter, Arial, sans-serif",
       [`@media (max-width:1200px)`]: {
         fontSize: "14px",
+        color: "#000",
       },
     },
   },
