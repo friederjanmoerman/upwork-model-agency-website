@@ -22,7 +22,7 @@ const theme = createTheme({
       fontSize: "50px",
       fontWeight: 800,
       [`@media (max-width:1200px)`]: {
-        fontSize: "19px",
+        fontSize: "22px",
       },
     },
     h3: {

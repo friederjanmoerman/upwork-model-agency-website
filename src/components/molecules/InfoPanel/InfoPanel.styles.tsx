@@ -7,7 +7,7 @@ interface StyledPanelProps {
 
 export const StyledPanel = styled("div")<StyledPanelProps>(({ progress }) => {
   const fadeInStart = 0.3
-  const fadeOutEnd = 0.7
+  const fadeOutEnd = 0.5
 
   let opacity
   if (progress <= fadeInStart) {
