@@ -5,7 +5,7 @@ import theme from "@/theme"
 
 export const StyledContainerFollowerSection = styled(Grid)<GridProps>(() => ({
   minHeight: "100vh",
-  paddingTop: "240%;",
+  paddingTop: "200%;",
   paddingBottom: "100px",
 }))
 
