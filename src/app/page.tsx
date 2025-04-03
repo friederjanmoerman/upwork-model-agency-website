@@ -23,7 +23,7 @@ export default function Home() {
         <AnimatedFixedLogo />
         <BackgroundFrames />
         <Splash setIsOpen={setIsOpen} />
-        <InfoSection />
+        <InfoSection setIsOpen={setIsOpen} />
       </StyledContainer>
 
       <FollowerSection />

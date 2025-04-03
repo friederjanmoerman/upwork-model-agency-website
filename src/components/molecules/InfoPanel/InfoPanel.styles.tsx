@@ -33,7 +33,6 @@ export const StyledPanel = styled("div")<StyledPanelProps>(({ progress }) => {
     transform: `translateY(-50%) translateY(${translateY}px)`,
     opacity,
     transition: "opacity 0.2s ease-out, transform 0.2s ease-out",
-    pointerEvents: "none",
     textAlign: "right",
     zIndex: 10,
     [theme.breakpoints.down("sm")]: {

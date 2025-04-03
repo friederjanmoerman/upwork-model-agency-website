@@ -3,10 +3,14 @@
 import InfoPanel from "@/components/molecules/InfoPanel/InfoPanel"
 import { StyledSection } from "./InfoSection.styles"
 
-function InfoSection() {
+type InfoPanelProps = {
+  setIsOpen: (open: boolean) => void
+}
+
+function InfoSection({ setIsOpen }: InfoPanelProps) {
   return (
     <StyledSection>
-      <InfoPanel></InfoPanel>
+      <InfoPanel setIsOpen={setIsOpen}></InfoPanel>
     </StyledSection>
   )
 }
