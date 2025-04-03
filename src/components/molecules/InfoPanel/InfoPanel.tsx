@@ -4,8 +4,13 @@
 import React, { useEffect, useState } from "react"
 import Typography from "@mui/material/Typography"
 import { StyledPanel } from "./InfoPanel.styles"
+import ButtonCustom from "@/components/atoms/ButtonCustom/ButtonCustom"
 
-const InfoPanel = () => {
+type InfoPanelProps = {
+  setIsOpen: (open: boolean) => void
+}
+
+function InfoPanel({ setIsOpen }: InfoPanelProps) {
   const [scrollProgress, setScrollProgress] = useState(0)
 
   const handleScroll = () => {
@@ -26,11 +31,10 @@ const InfoPanel = () => {
 
   return (
     <StyledPanel progress={scrollProgress}>
-      <Typography variant="h2">Custom AI Viking Videos</Typography>
-      <Typography color="primary" variant="body1">
-        Your real likeness into one-of-a-kind Viking-inspired videos that captivate and resonate. Your natural beauty
-        amplified.
+      <Typography variant="h2">
+        Work less,<br></br>get paid more
       </Typography>
+      <ButtonCustom onClick={() => setIsOpen(true)}>Apply here</ButtonCustom>
     </StyledPanel>
   )
 }
