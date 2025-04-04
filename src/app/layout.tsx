@@ -1,8 +1,25 @@
+// Next
+import { Metadata } from "next"
+
+// React
 import { ReactNode } from "react"
+
+// Theme
 import ThemeRegistry from "@/components/ThemeRegistry"
+
+// Fonts
 import { Inter } from "next/font/google"
+
+// Vercel
 import { SpeedInsights } from "@vercel/speed-insights/next"
+
+// Global Styles
 import "@/app/globals.css"
+
+export const metadata: Metadata = {
+  title: "Valhalla Girls",
+  description: "Become a Valhalla Girl and enter today.",
+}
 
 const inter = Inter({
   subsets: ["latin"],
