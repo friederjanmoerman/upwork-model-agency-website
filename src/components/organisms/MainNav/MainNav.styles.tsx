@@ -1,5 +1,6 @@
 "use client"
 
+// MUI
 import { AppBar, AppBarProps, styled, Toolbar, ToolbarProps } from "@mui/material"
 
 export const StyledAppBar = styled(AppBar)<AppBarProps>(() => ({

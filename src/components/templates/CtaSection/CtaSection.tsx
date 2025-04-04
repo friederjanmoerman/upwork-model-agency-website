@@ -1,10 +1,13 @@
 "use client"
+
+// Components
 import ButtonCustom from "@/components/atoms/ButtonCustom/ButtonCustom"
+
+// Styles
 import { StyledContainerCtaSection } from "./CtaSection.styles"
 
-type CtaSectionProps = {
-  setIsOpen: (open: boolean) => void
-}
+// Properties
+import { CtaSectionProps } from "./CtaSection.props"
 
 export function CtaSection({ setIsOpen }: CtaSectionProps) {
   return (

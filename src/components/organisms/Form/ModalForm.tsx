@@ -1,4 +1,7 @@
+// React
 import React, { useState, useRef, useEffect } from "react"
+
+// MUI
 import {
   Dialog,
   DialogContent,
@@ -11,58 +14,20 @@ import {
   Box,
   Typography,
 } from "@mui/material"
-import { FormContainer, FormSectionTitle } from "./ModalForm.styles"
+
+// Components
 import ButtonCustom from "@/components/atoms/ButtonCustom/ButtonCustom"
 
-interface ModalFormProps {
-  open: boolean
-  handleClose: () => void
-}
+// Styles
+import { FormContainer, FormSectionTitle } from "./ModalForm.styles"
 
-const initialFormData = {
-  fullName: "",
-  dateOfBirth: "",
-  age: "",
-  phoneNumber: "",
-  email: "",
-  location: "",
-  instagram: "",
-  tiktok: "",
-  twitter: "",
-  onlyfans: "",
-  otherLinks: "",
-  hoursPerWeek: "",
-  adultContentExperience: "",
-  cameraSetup: "",
-  liveShows: "",
-  specialSkills: "",
-  partnershipPercentage: "",
-  motivation: "",
-  additionalInfo: "",
-  honeypot: "",
-}
+// Properties
+import { ModalFormProps } from "./ModalForm.props"
 
-const requiredFields = [
-  "fullName",
-  "dateOfBirth",
-  "age",
-  "email",
-  "location",
-  "instagram",
-  "tiktok",
-  "hoursPerWeek",
-  "adultContentExperience",
-  "cameraSetup",
-  "liveShows",
-  "partnershipPercentage",
-  "motivation",
-]
+// Constants
+import { initialFormData, requiredFields } from "./ModalForm.constants"
 
-// ModalForm.tsx
-
-// (imports remain the same as your original file)
-
-const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
+const ModalForm = ({ open, handleClose }: ModalFormProps) => {
   const formRenderedTime = useRef(Date.now())
   const [success, setSuccess] = useState(false)
   const [formData, setFormData] = useState(initialFormData)
@@ -210,7 +175,6 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
                 fullWidth
               />
 
-              {/* Social Media & Online Presence */}
               <FormSectionTitle variant="h6">Social Media & Online Presence</FormSectionTitle>
               <TextField
                 required
@@ -251,7 +215,6 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
                 fullWidth
               />
 
-              {/* Availability & Commitment */}
               <FormSectionTitle variant="h6">Availability & Commitment</FormSectionTitle>
               <FormLabel required error={errors.hoursPerWeek}>
                 How many hours per week can you dedicate?
@@ -293,7 +256,6 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
                 <FormControlLabel value="maybe" control={<Radio />} label="Maybe, need details" />
               </RadioGroup>
 
-              {/* Special Skills & Experience */}
               <FormSectionTitle variant="h6">Special Skills & Experience</FormSectionTitle>
               <TextField
                 label="Any special skills or talents?"
@@ -304,7 +266,6 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
                 fullWidth
               />
 
-              {/* Partnership & Expectations */}
               <FormSectionTitle variant="h6">Partnership & Expectations</FormSectionTitle>
               <TextField
                 required
@@ -316,7 +277,6 @@ const ModalForm: React.FC<ModalFormProps> = ({ open, handleClose }) => {
                 fullWidth
               />
 
-              {/* Additional Information */}
               <FormSectionTitle variant="h6">Additional Information</FormSectionTitle>
               <TextField
                 required

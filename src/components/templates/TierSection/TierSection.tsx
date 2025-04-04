@@ -1,11 +1,16 @@
 "use client"
 
-import { Typography } from "@mui/material"
-import { StyledContainerTierSection, StyledSection, StyledTier, StyledTierIcon } from "./TierSection.styles"
+// React
 import { useEffect, useRef, useState } from "react"
+
+// MUI
+import { Typography } from "@mui/material"
+
+// Styles
+import { StyledContainerTierSection, StyledSection, StyledTier, StyledTierIcon } from "./TierSection.styles"
 import { StyledContainer } from "@/app/page.styles"
 
-function TierSection() {
+const TierSection = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [fadeInIndex, setFadeInIndex] = useState(0)

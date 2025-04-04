@@ -1,10 +1,18 @@
 "use client"
+
+// React
 import React from "react"
+
+// MUI
 import { Link } from "@mui/material"
+
+// Components
 import SocialIcons from "@/components/molecules/SocialIcons/SocialIcons"
+
+// Styles
 import { FooterContainer } from "./Footer.styles"
 
-export function Footer() {
+const Footer = () => {
   return (
     <FooterContainer>
       <Link

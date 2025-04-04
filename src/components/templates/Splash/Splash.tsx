@@ -1,3 +1,4 @@
+// MUI
 import { Typography } from "@mui/material"
 import {
   StyledSplash,
@@ -7,14 +8,15 @@ import {
   StyledSplashBodyRight,
   StyledSplashBodyRightEmphasis,
 } from "./Splash.styles"
+
+// Components
 import MainNav from "@/components/organisms/MainNav/MainNav"
 import ButtonCustom from "@/components/atoms/ButtonCustom/ButtonCustom"
 
-type SplashProps = {
-  setIsOpen: (open: boolean) => void
-}
+// Properties
+import { SplashProps } from "./Splash.props"
 
-function Splash({ setIsOpen }: SplashProps) {
+const Splash = ({ setIsOpen }: SplashProps) => {
   return (
     <StyledSplash>
       <MainNav />

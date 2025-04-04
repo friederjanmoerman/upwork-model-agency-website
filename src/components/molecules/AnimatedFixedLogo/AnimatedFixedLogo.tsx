@@ -1,8 +1,12 @@
-// AnimatedFixedLogo.tsx
 "use client"
 
+// React
 import React, { useEffect, useState } from "react"
+
+// Styles
 import { AnimatedFixedLogoContainer } from "./AnimatedFixedLogo.styles"
+
+// Components
 import Logo from "@/components/atoms/Logo/Logo"
 
 const AnimatedFixedLogo = () => {

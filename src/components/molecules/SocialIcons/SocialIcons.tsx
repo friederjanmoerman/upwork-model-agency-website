@@ -1,4 +1,7 @@
+// Components
 import IconButtonCustom from "@/components/atoms/IconButtonCustom/IconButtonCustom"
+
+// Styles
 import { StyledToolbar } from "./SocialIcons.styles"
 
 function SocialIcons() {

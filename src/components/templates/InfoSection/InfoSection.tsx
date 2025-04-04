@@ -9,7 +9,7 @@ import { StyledSection } from "./InfoSection.styles"
 // Properties
 import { InfoPanelProps } from "./InfoSections.props"
 
-function InfoSection({ setIsOpen }: InfoPanelProps) {
+const InfoSection = ({ setIsOpen }: InfoPanelProps) => {
   return (
     <StyledSection>
       <InfoPanel setIsOpen={setIsOpen}></InfoPanel>

@@ -1,4 +1,7 @@
+// Theme
 import theme from "@/theme"
+
+// Styles
 import { styled, Theme } from "@mui/material/styles"
 
 export const StyledSplash = styled("section")(() => ({

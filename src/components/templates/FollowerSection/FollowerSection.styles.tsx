@@ -1,7 +1,12 @@
+// Next
+import Image from "next/image"
+
+// Theme
+import theme from "@/theme"
+
+// MUI
 import Grid, { GridProps } from "@mui/material/Grid"
 import { styled } from "@mui/material"
-import Image from "next/image"
-import theme from "@/theme"
 
 export const StyledContainerFollowerSection = styled(Grid)<GridProps>(() => ({
   minHeight: "100vh",

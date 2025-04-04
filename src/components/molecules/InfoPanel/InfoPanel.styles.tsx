@@ -1,10 +1,13 @@
 // InfoPanel.styles.tsx
+
+// Theme
 import theme from "@/theme"
+
+// MUI
 import { styled } from "@mui/material"
 
-interface StyledPanelProps {
-  progress: number
-}
+// Properties
+import { StyledPanelProps } from "./InfoPanel.props"
 
 export const StyledPanel = styled("div")<StyledPanelProps>(({ progress }) => {
   const fadeInStart = 0.3

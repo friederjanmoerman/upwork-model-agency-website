@@ -1,3 +1,3 @@
-export interface InfoPanelProps {
+export interface CtaSectionProps {
   setIsOpen: (open: boolean) => void
 }

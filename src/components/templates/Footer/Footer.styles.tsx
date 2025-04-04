@@ -1,3 +1,4 @@
+// MUI
 import { Box, styled } from "@mui/material"
 
 export const FooterContainer = styled("footer")(({ theme }) => ({

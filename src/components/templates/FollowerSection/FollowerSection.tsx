@@ -31,7 +31,7 @@ const animateCount = (target: number, duration: number, setter: (val: number) =>
   requestAnimationFrame(step)
 }
 
-function FollowerSection() {
+const FollowerSection = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [fadeInIndex, setFadeInIndex] = useState(0)

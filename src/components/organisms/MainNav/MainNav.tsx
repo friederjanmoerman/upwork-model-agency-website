@@ -1,5 +1,8 @@
-import { StyledAppBar } from "./MainNav.styles"
+// Components
 import SocialIcons from "@/components/molecules/SocialIcons/SocialIcons"
+
+// Styles
+import { StyledAppBar } from "./MainNav.styles"
 
 function MainNav() {
   return (

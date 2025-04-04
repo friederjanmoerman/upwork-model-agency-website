@@ -1,3 +1,3 @@
-export interface InfoPanelProps {
+export interface SplashProps {
   setIsOpen: (open: boolean) => void
 }

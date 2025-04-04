@@ -1,9 +1,8 @@
-// AnimatedFixedLogo.styles.tsx
+// Styles
 import { styled } from "@mui/material/styles"
 
-interface AnimatedFixedLogoContainerProps {
-  visible: boolean
-}
+// Properties
+import { AnimatedFixedLogoContainerProps } from "./AnimatedFixedLogo.props"
 
 export const AnimatedFixedLogoContainer = styled("div")<AnimatedFixedLogoContainerProps>(({ visible }) => ({
   position: "fixed",

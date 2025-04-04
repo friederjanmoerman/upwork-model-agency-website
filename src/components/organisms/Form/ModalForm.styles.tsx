@@ -1,5 +1,8 @@
-import { styled } from "@mui/material/styles"
+// MUI
 import { Box, Typography } from "@mui/material"
+
+// Styles
+import { styled } from "@mui/material/styles"
 
 export const FormContainer = styled(Box)(({ theme }) => ({
   display: "flex",
