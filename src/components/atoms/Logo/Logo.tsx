@@ -1,6 +1,7 @@
+// Styles
 import { StyledLogo } from "./Logo.styles"
 
-export function Logo() {
+const Logo = () => {
   return <StyledLogo>Valhalla Girls</StyledLogo>
 }
 

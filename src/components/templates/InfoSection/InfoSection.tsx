@@ -1,11 +1,13 @@
 "use client"
 
+// Components
 import InfoPanel from "@/components/molecules/InfoPanel/InfoPanel"
+
+// Styles
 import { StyledSection } from "./InfoSection.styles"
 
-type InfoPanelProps = {
-  setIsOpen: (open: boolean) => void
-}
+// Properties
+import { InfoPanelProps } from "./InfoSections.props"
 
 function InfoSection({ setIsOpen }: InfoPanelProps) {
   return (

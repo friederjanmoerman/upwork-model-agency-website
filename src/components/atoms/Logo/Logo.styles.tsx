@@ -1,3 +1,4 @@
+// MUI
 import { styled, Theme } from "@mui/material/styles"
 
 export const StyledLogo = styled("div")(({ theme }: { theme: Theme }) => ({

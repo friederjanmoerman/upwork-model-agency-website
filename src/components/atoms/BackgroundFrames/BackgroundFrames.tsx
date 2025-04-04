@@ -1,6 +1,9 @@
 "use client"
 
+// React
 import React, { useEffect, useRef } from "react"
+
+// Styles
 import { StyledCanvas, StyledOverlay, StyledBackgroundWrapper, StyledOverlayTest } from "./BackgroundFrames.styles"
 
 const FRAME_COUNT = 167
@@ -13,7 +16,6 @@ const BackgroundFrames = () => {
   const imagesRef = useRef<HTMLImageElement[]>([])
   const currentFrameIndex = useRef(0)
 
-  // Preload all frames
   useEffect(() => {
     const loadImages = async () => {
       const imagePromises = Array.from({ length: FRAME_COUNT }, (_, i) => {
@@ -31,7 +33,6 @@ const BackgroundFrames = () => {
     loadImages()
   }, [])
 
-  // Draw a specific frame
   const drawFrame = (index: number) => {
     const canvas = canvasRef.current
     const ctx = canvas?.getContext("2d")
@@ -48,13 +49,11 @@ const BackgroundFrames = () => {
     let drawWidth, drawHeight, offsetX, offsetY
 
     if (imgRatio > canvasRatio) {
-      // Image is wider than canvas
       drawHeight = canvas.height
       drawWidth = img.width * (canvas.height / img.height)
       offsetX = (canvas.width - drawWidth) / 2
       offsetY = 0
     } else {
-      // Image is taller than canvas
       drawWidth = canvas.width
       drawHeight = img.height * (canvas.width / img.width)
       offsetX = 0

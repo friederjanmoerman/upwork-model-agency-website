@@ -1,7 +1,10 @@
+// MUI
 import { ButtonProps } from "@mui/material"
+
+// Styles
 import { StyledButton } from "./ButtonCustom.styles"
 
-export function ButtonCustom(props: ButtonProps) {
+const ButtonCustom = (props: ButtonProps) => {
   return <StyledButton {...props} />
 }
 

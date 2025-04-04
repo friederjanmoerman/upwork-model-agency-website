@@ -1,14 +1,19 @@
 "use client"
 
+// React
+import { useEffect, useRef, useState } from "react"
+
+// MUI
 import { Typography } from "@mui/material"
+
+// Styles
+import { StyledContainer } from "@/app/page.styles"
 import {
   StyledContainerFollowerSection,
   StyledSection,
   StyledFollower,
   StyledFollowerCount,
 } from "./FollowerSection.styles"
-import { useEffect, useRef, useState } from "react"
-import { StyledContainer } from "@/app/page.styles"
 
 const animateCount = (target: number, duration: number, setter: (val: number) => void) => {
   let start = 0
