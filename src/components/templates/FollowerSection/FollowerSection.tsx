@@ -46,7 +46,7 @@ const FollowerSection = () => {
           setIsVisible(true)
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     )
 
     if (sectionRef.current) observer.observe(sectionRef.current)
@@ -57,26 +57,16 @@ const FollowerSection = () => {
   }, [])
 
   useEffect(() => {
-    let interval: NodeJS.Timeout
     if (isVisible) {
-      interval = setInterval(() => {
-        setFadeInIndex(prev => {
-          if (prev >= 3) {
-            clearInterval(interval)
-            return prev
-          }
-          return prev + 1
-        })
-      }, 300)
+      setFadeInIndex(3)
     }
-    return () => clearInterval(interval)
   }, [isVisible])
 
   useEffect(() => {
-    if (fadeInIndex === 2 && tiktokFollowers === 0) {
+    if (fadeInIndex >= 2 && tiktokFollowers === 0) {
       animateCount(700000, 1000, setTiktokFollowers)
     }
-    if (fadeInIndex === 3 && instagramFollowers === 0) {
+    if (fadeInIndex >= 3 && instagramFollowers === 0) {
       animateCount(855000, 1000, setInstagramFollowers)
     }
   }, [fadeInIndex, tiktokFollowers, instagramFollowers])
