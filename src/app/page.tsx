@@ -20,6 +20,8 @@ import { StyledContainer } from "./page.styles"
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
 
+  console.log("new1")
+
   return (
     <>
       <StyledContainer>
