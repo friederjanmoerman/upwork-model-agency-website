@@ -49,6 +49,9 @@ export const StyledFollowerCount = styled("h2")(() => ({
   padding: 0,
   fontFamily: theme.typography.fontFamily,
   color: theme.palette.secondary.main,
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "40px",
+  },
 }))
 
 export const StyledFollowerIcon = styled(Image)(() => ({
