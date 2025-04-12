@@ -33,20 +33,20 @@ const animateCount = (target: number, duration: number, setter: (val: number) =>
 
 const FollowerSection = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null)
-  const [isVisible, setIsVisible] = useState(false)
-  const [fadeInIndex, setFadeInIndex] = useState(0)
-
+  const [hasAnimated, setHasAnimated] = useState(false)
   const [tiktokFollowers, setTiktokFollowers] = useState(0)
   const [instagramFollowers, setInstagramFollowers] = useState(0)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       entries => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true)
+        if (entries[0].isIntersecting && !hasAnimated) {
+          animateCount(700000, 1000, setTiktokFollowers)
+          animateCount(855000, 1000, setInstagramFollowers)
+          setHasAnimated(true)
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     )
 
     if (sectionRef.current) observer.observe(sectionRef.current)
@@ -54,37 +54,22 @@ const FollowerSection = () => {
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current)
     }
-  }, [])
-
-  useEffect(() => {
-    if (isVisible) {
-      setFadeInIndex(3)
-    }
-  }, [isVisible])
-
-  useEffect(() => {
-    if (fadeInIndex >= 2 && tiktokFollowers === 0) {
-      animateCount(700000, 1000, setTiktokFollowers)
-    }
-    if (fadeInIndex >= 3 && instagramFollowers === 0) {
-      animateCount(855000, 1000, setInstagramFollowers)
-    }
-  }, [fadeInIndex, tiktokFollowers, instagramFollowers])
+  }, [hasAnimated])
 
   return (
     <StyledContainerFollowerSection>
       <StyledContainer>
         <StyledSection ref={sectionRef} container spacing={{ xs: 2, md: 4 }}>
-          <StyledFollower item md={6} className={fadeInIndex >= 2 ? "fade-in" : ""}>
+          <StyledFollower item md={6} className={hasAnimated ? "fade-in" : ""}>
             <Typography color="secondary" variant="h3">
               You&apos;ll be exposed to
             </Typography>
             <StyledFollowerCount>{tiktokFollowers.toLocaleString("de-DE")}</StyledFollowerCount>
             <Typography color="secondary" variant="h3">
-              Tiktok followers
+              TikTok followers
             </Typography>
           </StyledFollower>
-          <StyledFollower item md={6} className={fadeInIndex >= 3 ? "fade-in" : ""}>
+          <StyledFollower item md={6} className={hasAnimated ? "fade-in" : ""}>
             <Typography color="secondary" variant="h3">
               You&apos;ll be exposed to
             </Typography>
