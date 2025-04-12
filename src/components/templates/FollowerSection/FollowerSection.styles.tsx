@@ -50,7 +50,7 @@ export const StyledFollowerCount = styled("h2")(() => ({
   fontFamily: theme.typography.fontFamily,
   color: theme.palette.secondary.main,
   [theme.breakpoints.down("sm")]: {
-    fontSize: "40px",
+    fontSize: "30px",
   },
 }))
 
