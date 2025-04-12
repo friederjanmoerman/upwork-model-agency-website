@@ -36,3 +36,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Failed to send email", details: message }, { status: 500 })
   }
 }
+
+console.log("SMTP_HOST:", process.env.SMTP_HOST)
+console.log("SMTP_PORT:", process.env.SMTP_PORT)
